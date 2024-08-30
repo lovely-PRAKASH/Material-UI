@@ -1,9 +1,19 @@
-import React from 'react'
+import { AppBar, Box, styled, Toolbar } from "@mui/material";
+import React from "react";
+
+const StyledToolbar = styled(Toolbar)({
+  display: "flex",
+  justifycontent: "space-between",
+});
 
 function Navbar() {
   return (
-    <div>Navbar</div>
-  )
+    <Box>
+      <AppBar position="sticky">
+        <StyledToolbar>Navbar</StyledToolbar>
+      </AppBar>
+    </Box>
+  );
 }
 
-export default Navbar
+export default Navbar;
