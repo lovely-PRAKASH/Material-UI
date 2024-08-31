@@ -4,6 +4,7 @@ import Feed from "./components/Feed";
 import RightBar from "./components/RightBar";
 import { Box, Stack } from "@mui/material";
 import Navbar from "./components/Navbar";
+import "./App.css"
 
 function App() {
   return (

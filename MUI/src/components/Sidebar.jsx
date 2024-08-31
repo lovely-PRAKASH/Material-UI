@@ -1,4 +1,13 @@
-import { AccountBox, Article, Group, Home, Person, Settings, Storefront } from "@mui/icons-material";
+import {
+  AccountBox,
+  Article,
+  Group,
+  Home,
+  ModeNight,
+  Person,
+  Settings,
+  Storefront,
+} from "@mui/icons-material";
 import {
   Box,
   List,
@@ -6,6 +15,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Switch,
 } from "@mui/material";
 import React from "react";
 
@@ -73,11 +83,20 @@ function Sidebar() {
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton>
+          <ListItemButton component="a" href="#simple-list">
             <ListItemIcon>
               <AccountBox />
             </ListItemIcon>
             <ListItemText primary="Profile" />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="#simple-list">
+            <ListItemIcon>
+              <ModeNight />
+            </ListItemIcon>
+            <Switch />
           </ListItemButton>
         </ListItem>
       </List>
