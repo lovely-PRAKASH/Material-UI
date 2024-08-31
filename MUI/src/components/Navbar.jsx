@@ -13,6 +13,7 @@ import {
 import React, { useState } from "react";
 import profilePic from "../assets/profile.jpg";
 import { Pets, Mail, Notifications } from "@mui/icons-material";
+
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
@@ -26,20 +27,20 @@ const Search = styled("div")(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  gap: "20px",
-  [theme.breakpoints.up("sm")]: {
-    display: "none",
-  },
-}));
-
-const Userbox = styled(Box)(({ theme }) => ({
   display: "none",
   alignItems: "center",
   gap: "20px",
   [theme.breakpoints.up("sm")]: {
     display: "flex",
+  },
+}));
+
+const Userbox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: "20px",
+  [theme.breakpoints.up("sm")]: {
+    display: "none",
   },
 }));
 
