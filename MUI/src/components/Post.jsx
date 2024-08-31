@@ -15,7 +15,7 @@ import React from "react";
 import spidermanPic from "../assets/spider-man.jpg";
 const Post = () => {
   return (
-    <Box flex={4} p={2}>
+    <Box flex={4} >
       <Box>
         <Card>
           <CardHeader
