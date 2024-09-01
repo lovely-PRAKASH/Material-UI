@@ -13,6 +13,7 @@ import {
 import React, { useState } from "react";
 import profilePic from "../assets/profile.jpg";
 import { Pets, Mail, Notifications } from "@mui/icons-material";
+import SearchIcon from "@mui/icons-material/Search";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -20,11 +21,15 @@ const StyledToolbar = styled(Toolbar)({
 });
 
 const Search = styled("div")(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper, 
-  color: theme.palette.text.primary, 
+  backgroundColor: theme.palette.background.paper,
+  color: theme.palette.text.primary,
   padding: "0 10px",
   borderRadius: theme.shape.borderRadius,
   width: "40%",
+  display:"flex",
+  // justifyContent:"center",
+  alignItems: "center",
+  gap: 10
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
@@ -51,10 +56,11 @@ const Navbar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Prakash Dev
+          {'< Prakash Dev />'}
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
+          <SearchIcon></SearchIcon>
           <InputBase placeholder="Search..." />
         </Search>
         <Icons>
