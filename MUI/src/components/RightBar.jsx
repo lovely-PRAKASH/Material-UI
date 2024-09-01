@@ -56,7 +56,7 @@ function RightBar() {
             <img src="https://material-ui.com/static/images/image-list/Camera.jpg" />
           </ImageListItem>
           <ImageListItem>
-            <img src="https://images.unsplash.com/photo-1525097487452-6278ff080c31" />
+            <img src="https://material-ui.com/static/images/image-list/Honey.jpg" />
           </ImageListItem>
           <ImageListItem>
             <img src="https://material-ui.com/static/images/image-list/Hats.jpg" />

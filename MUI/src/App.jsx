@@ -9,21 +9,21 @@ import "./App.css";
 import Add from "./components/Add";
 
 function App() {
-  const [mode, setMode] = useState('dark'); 
+  const [mode, setMode] = useState("light");
 
-  const theme = createTheme({
+  const darkMode = createTheme({
     palette: {
-      mode: mode, 
+      mode: mode,
     },
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline /> 
-      <Box bgcolor={"background.default"} color={"text.primary"} >
+    <ThemeProvider theme={darkMode}>
+      <CssBaseline />
+      <Box bgcolor={"background.default"} color={"text.primary"}>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
-          <Sidebar />
+          <Sidebar setMode={setMode} mode={mode} />
           <Feed />
           <RightBar />
         </Stack>
