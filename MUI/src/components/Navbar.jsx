@@ -14,6 +14,7 @@ import React, { useState } from "react";
 import profilePic from "../assets/profile.jpg";
 import { Pets, Mail, Notifications } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -60,8 +61,9 @@ const Navbar = () => {
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
-          <SearchIcon></SearchIcon>
-          <InputBase placeholder="Search..." />
+          {/* <SearchIcon></SearchIcon> */}
+          <TravelExploreIcon ></TravelExploreIcon>
+          <InputBase placeholder="Search..." fullWidth/>
         </Search>
         <Icons>
           <Badge badgeContent={4} color="error">
