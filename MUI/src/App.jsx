@@ -2,23 +2,25 @@ import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import RightBar from "./components/RightBar";
-import { Box, Stack } from "@mui/material";
+import { Box, createTheme, Stack } from "@mui/material";
 import Navbar from "./components/Navbar";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 import "./App.css";
 import Add from "./components/Add";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState('dark'); 
 
-  const darkTheme = createTheme({
+  const theme = createTheme({
     palette: {
-      mode: mode,
+      mode: mode, 
     },
   });
+
   return (
-    <ThemeProvider darkTheme={darkTheme}>
-      <Box>
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> 
+      <Box bgcolor={"background.default"} color={"text.primary"} >
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar />
